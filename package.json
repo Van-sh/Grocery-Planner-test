@@ -6,8 +6,8 @@
   "scripts": {
     "start": "vite",
     "build": "tsc -b && vite build",
-    "predeploy": "npm run build && mv ./dist/index.html ./dist/200.html",
-    "deploy": "surge ./dist grocery-planner.surge.sh",
+    "predeploy": "npm run build && mv ./build/index.html ./build/200.html",
+    "deploy": "surge ./build grocery-planner-test.surge.sh",
     "lint": "eslint .",
     "preview": "vite preview",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,css,html}\""

@@ -38,12 +38,12 @@ jobs:
           VITE_GOOGLE_LOGIN_CLIENT_ID: ${{ secrets.VITE_GOOGLE_LOGIN_CLIENT_ID }}
 
       - name: Rename file 
-        run: mv ./dist/index.html ./dist/200.html
+        run: mv ./build/index.html ./build/200.html
 
       - name: Deploy to grocery-planner.surge.sh
         uses: dswistowski/surge-sh-action@v1
         with:
-          domain: 'grocery-planner.surge.sh'
-          project: './dist'
+          domain: 'grocery-planner-test.surge.sh'
+          project: './build'
           login: ${{ secrets.SURGE_LOGIN }}
           token: ${{ secrets.SURGE_TOKEN }}
