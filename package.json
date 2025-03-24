@@ -1,0 +1,50 @@
+{
+  "name": "grocery-planner-vite",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "start": "vite",
+    "build": "tsc -b && vite build",
+    "predeploy": "npm run build && mv ./dist/index.html ./dist/200.html",
+    "deploy": "surge ./dist grocery-planner.surge.sh",
+    "lint": "eslint .",
+    "preview": "vite preview",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,css,html}\""
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.7.2",
+    "@fortawesome/free-solid-svg-icons": "^6.7.2",
+    "@fortawesome/react-fontawesome": "^0.2.2",
+    "@react-oauth/google": "^0.12.1",
+    "@reduxjs/toolkit": "^2.6.1",
+    "formik": "^2.4.6",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-redux": "^9.2.0",
+    "react-router-dom": "^7.4.0",
+    "yup": "^1.4.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.21.0",
+    "@heroui/react": "^2.7.5",
+    "@types/node": "^22.13.12",
+    "@types/react": "^19.0.10",
+    "@types/react-dom": "^19.0.4",
+    "@vitejs/plugin-react": "^4.3.4",
+    "autoprefixer": "^10.4.21",
+    "eslint": "^9.21.0",
+    "eslint-plugin-react-hooks": "^5.1.0",
+    "eslint-plugin-react-refresh": "^0.4.19",
+    "framer-motion": "^12.5.0",
+    "globals": "^15.15.0",
+    "postcss": "^8.5.3",
+    "prettier": "^3.5.3",
+    "sass": "^1.86.0",
+    "surge": "^0.24.6",
+    "tailwindcss": "^3.4.17",
+    "typescript": "~5.7.2",
+    "typescript-eslint": "^8.24.1",
+    "vite": "^6.2.0"
+  }
+}
